@@ -31,14 +31,17 @@ pipeline {
         }
     }
     stage('Deploy to Prod') {
-        echo 'Deploy to Prod'
-    }
-  }
-  post {
+        steps {
+            echo 'Deploy to Prod'
+
+        }
+            
+        }
+     post {
     always {
         echo 'I will always say Hello again'
     }
   }
 }
-
+}
 
